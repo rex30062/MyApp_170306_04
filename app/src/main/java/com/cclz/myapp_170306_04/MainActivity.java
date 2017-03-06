@@ -42,9 +42,11 @@ public class MainActivity extends AppCompatActivity {
 
         adapter =new SimpleAdapter(this,
                 data,
-                android.R.layout.simple_list_item_2,
-                new String[] {"city", "code"},
-                new int[]{android.R.id.text1,android.R.id.text2}
+//                android.R.layout.simple_list_item_2,    // 系統內建兩行兩行的下拉
+                R.layout.myitem, // 自訂 layout
+                new String[] {"city", "code"},  //
+//                new int[]{android.R.id.text1,android.R.id.text2}    //
+                new int[]{R.id.tvcity,R.id.tvCode}  // 自訂 layout
         );
         spinner.setAdapter(adapter);
     }
